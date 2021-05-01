@@ -1,0 +1,139 @@
+.c-button {
+  /* other styles */
+  font-size: 1rem;
+  min-width: 6.25em;
+  border-radius: 0.3125em;
+  padding: 0.625em 1em;
+}
+
+.c-button svg {
+  width: 1.25em;
+  height: 1.25em;
+  margin-right: 0.25em;
+}
+
+
+****
+
+
+.c-button {
+  appearance: none;
+  font-family: inherit;
+  display: inline-block;
+  min-width: 100px;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  padding: 10px 16px;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  
+  &:hover {
+    background: #1d49aa;
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+  }
+}
+
+/********** Basic Styles **********/
+.wrapper {
+  max-width: 500px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Rubik";
+}
+
+
+
+******
+
+
+
+.btn {
+  /* default for <button>, but useful for <a> */
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+
+  /* create a small space when buttons wrap on 2 lines */
+  margin: 2px 0;
+
+  /* invisible border (will be colored on hover/focus) */
+  border: solid 1px transparent;
+  border-radius: 4px;
+
+  /* size comes from text & padding (no width/height) */
+  padding: 0.5em 1em;
+
+  /* make sure colors have enough contrast! */
+  color: #ffffff;
+  background-color: #9555af;
+}
+
+
+/* old-school "down" effect on clic + color tweak */
+.btn:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+
+/* inverse colors on mouse-over */
+.btn:hover {
+  color: #9555af;
+  border-color: currentColor;
+  background-color: white;
+}
+
+
+
+**
+
+.btn {
+  /* ... */
+  /* all browsers: remove the default outline since
+      we are rolling our own focus styles */
+  outline: none;
+}
+
+/* Firefox: removes the inner border shown on focus */
+.btn::-moz-focus-inner {
+  border: none;
+}
+
+
+
+/* make sure we have a visible focus ring */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.5),
+    0 0 0 1.5px rgba(255, 105, 180, 0.5);
+}
+
+
+
+/* hide focus style if not from keyboard navigation */
+.js-focus-visible .btn:focus:not(.focus-visible) {
+  box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

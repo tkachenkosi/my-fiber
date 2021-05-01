@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  /* Green #9cbae0 #739dd2 #4980c5 #3465a4 */ 
+  /*background-color: #4CAF50; */
+  border: none;
+  color: white;
+  padding: 0.3em 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 4px 2px;
+  /*cursor: pointer;*/
+  border-radius: 4px;
+  min-width: 4em;
+  putline: none;
+}
+
+.button1:hover {
+/* #008cba 0078b2 */
+/* f3f3f3 f0f0f0 #dbdbdb b6b6b6 929292 6d6d6d 494949 */
+  background-color: #3e8e41;
+}
+.button2:hover {background-color: #0078b2;}
+.button3:hover {background-color: #d74336;}
+.button4:hover {background-color: #dbdbdb;}
+.button5:hover {background-color: #555555;}
+
+.button1:active {padding-left:1.1em;padding-right:0.9em}
+.button2:active {padding-left:1.1em;padding-right:0.9em}
+.button3:active {padding-left:1.1em;padding-right:0.9em}
+.button4:active {padding-left:1.1em;padding-right:0.9em}
+.button5:active {padding-left:1.1em;padding-right:0.9em}
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */ 
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+.button5 {background-color: #6d6d6d;} /* Black */
+</style>
+</head>
+<body>
+
+<h2>Button Colors</h2>
+<p>Change the background color of a button with the background-color property:</p>
+
+<button class="button button1">Green</button>
+<button class="button button2">Blue</button>
+<button class="button button3">Red</button>
+<button class="button button4">Gray</button>
+<button class="button button5">Black</button>
+
+</body>
+</html>

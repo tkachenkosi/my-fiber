@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Пример страницы</title>
+        <link rel="stylesheet" href="/css/my.css">
+        <link rel="stylesheet" href="/css/btn.css">
+        <link rel="stylesheet" href="/css/tbl.css">
+        <script src="/js/my.js" defer></script>
+    </head>
+    <body>
+    <h1>
+	{{title}}
+    </h1>
+    <p>Тестовый сервер</p>
+    <hr>
+    <p>/stat /index /ping</p>
+
+    <button type="button" class="btn0" onclick="main3()">Test Json</button>
+
+    <br>
+    <br>
+    <br>
+    <button type="button" class="btn btn1" onclick="kadry()">Test btn1</button>
+    <button type="button" class="btn btn1" onclick="kadryj()">Test</button>
+    <button type="button" class="btn btn2">Test btn2</button>
+    <button type="button" class="btn btn2">Test</button>
+    <button type="button" class="btn btn3">Test btn3</button>
+    <button type="button" class="btn btn3">Test</button>
+    <button type="button" class="btn btn4">Test btn4</button>
+    <button type="button" class="btn btn4">Test</button>
+    <button type="button" class="btn btn5">Test btn5</button>
+
+    <br>
+    <p id="result"></p>
+
+<br>
+<div>
+<table class="mytab">
+<tr><th>№</th><th>Код</th><th>Имя</th><th>Адрес</th><th>ТСТ</th><th>Пин</th><th>#</th></tr>
+<tr><td>0</td><td>100</td><td>Михаил</td><td>Воркута, Ленина, 55</td><td>Ягодка</td><td>30554</td><td><label data-id="1" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>1</td><td>200</td><td>Александр</td><td>Воркута, Гоголя, 7</td><td>Чистый мир</td><td>71324</td><td><label data-id="2" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>2</td><td>202</td><td>Константин</td><td>Ярославль, Центральная, 5</td><td>Горячий хлеб</td><td>53878</td><td><label data-id="3" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>3</td><td>240</td><td>Лена</td><td>Нерехта, Пролетарская, 14</td><td>Оазис</td><td>77623</td><td><label data-id="4" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>4</td><td>250</td><td>Николай</td><td>Воркута, Возейская, 11</td><td>Спорт товары</td><td>67098</td><td><label data-id="5" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>5</td><td>270</td><td>Эдуард</td><td>Москва, Ватутина, 4</td><td>Мадам шик</td><td>57332</td><td><label data-id="6" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>6</td><td>340</td><td>Павел</td><td>Нерехта, Пролетарская, 21</td><td>Аромат</td><td>32775</td><td><label data-id="7" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>7</td><td>345</td><td>Лена</td><td>Ярославль, Ленинский просп., 11</td><td>Лиса</td><td>80921</td><td><label data-id="8" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>8</td><td>350</td><td>Анна</td><td>Ярославль, Ленинградская, 71</td><td>Дионис</td><td>78367</td><td><label data-id="9" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+</table>
+</div>
+
+<br>
+<div id="kadry"></div>
+
+<br>
+<div id="kadryj"></div>
+
+
+    </body>
+</html>

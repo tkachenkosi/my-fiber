@@ -1,0 +1,28 @@
+html{
+    box-sizing:border-box;
+}
+*, *:after, *:before{
+    box-sizing:inherit;
+}
+
+body {
+  margin: 0;
+  padding: 1px;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+h1 {
+    color: red;
+  font-family: Times;
+}
+}
+
+#result {
+    font-size:0.7rem;
+    font-weight:bold;
+}

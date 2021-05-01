@@ -1,0 +1,104 @@
+{% code
+type Kadry struct {
+  Vars map[string]interface{}
+  Lines []map[string]interface{}
+}
+%}
+
+{% func (p *Kadry) Body() %}
+<div class="kadry">
+Список пользователей
+{%v p.Vars["name"] %}
+{%v p.Vars["test"] %}
+<br>
+  <button type="button" class="btn2" onclick="kadry10()"><i class="icon-calc" aria-hidden="true"></i>Загрузить кадры</button>
+
+<br>
+<br>
+
+<div>
+<table id="kadry1" class="mytab">
+<thead>
+<tr><th width="40">№</th><th width="45">ID</th><th width="180">Логин</th><th width="210">Фамилия Имя</th><th width="280">Адрес</th><th width="107">Дата</th><th width="280">Emaill</th><th>#</th></tr>
+</thead>
+<tbody id="body_kadry1"></tbody>
+</table>
+</div>
+  <button type="button" class="btn2" onclick="kadry13()"><i class="icon-left" aria-hidden="true"></i></button>
+  <button type="button" class="btn2" onclick="kadry12()"><i class="icon-right" aria-hidden="true"></i></button>
+<br>
+<br>
+<div>
+<table class="mytab">
+<tr><th>№</th><th>Код</th><th>Имя</th><th>Адрес</th><th>ТСТ</th><th>Пин</th><th>#</th></tr>
+<tr><td>0</td><td>100</td><td>Михаил</td><td>Воркута, Ленина, 55</td><td>Ягодка</td><td>30554</td><td><label data-id="1" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>1</td><td>200</td><td>Александр</td><td>Воркута, Гоголя, 7</td><td>Чистый мир</td><td>71324</td><td><label data-id="2" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>2</td><td>202</td><td>Константин</td><td>Ярославль, Центральная, 5</td><td>Горячий хлеб</td><td>53878</td><td><label data-id="3" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>3</td><td>240</td><td>Лена</td><td>Нерехта, Пролетарская, 14</td><td>Оазис</td><td>77623</td><td><label data-id="4" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>4</td><td>250</td><td>Николай</td><td>Воркута, Возейская, 11</td><td>Спорт товары</td><td>67098</td><td><label data-id="5" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>5</td><td>270</td><td>Эдуард</td><td>Москва, Ватутина, 4</td><td>Мадам шик</td><td>57332</td><td><label data-id="6" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>6</td><td>340</td><td>Павел</td><td>Нерехта, Пролетарская, 21</td><td>Аромат</td><td>32775</td><td><label data-id="7" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>7</td><td>345</td><td>Лена</td><td>Ярославль, Ленинский просп., 11</td><td>Лиса</td><td>80921</td><td><label data-id="8" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+<tr><td>8</td><td>350</td><td>Анна</td><td>Ярославль, Ленинградская, 71</td><td>Дионис</td><td>78367</td><td><label data-id="9" class="mybtn" onclick="myPup(this,'pup1')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+</table>
+</div>
+
+<br>
+
+<div>
+<table>
+<tr><th>№</th><th>Код</th><th>Имя</th><th>Адрес</th><th>ТСТ</th><th>Пин</th></tr>
+<tr><td>0</td><td>100</td><td>Михаил</td><td>Воркута, Ленина, 55</td><td>Ягодка</td><td>30554</td></tr>
+<tr><td>1</td><td>200</td><td>Александр</td><td>Воркута, Гоголя, 7</td><td>Чистый мир</td><td>71324</td></tr>
+<tr><td>2</td><td>202</td><td>Константин</td><td>Ярославль, Центральная, 5</td><td>Горячий хлеб</td><td>53878</td></tr>
+<tr><td>3</td><td>240</td><td>Лена</td><td>Нерехта, Пролетарская, 14</td><td>Оазис</td><td>77623</td></tr>
+</table>
+</div>
+
+</div>
+
+{% for i, line := range p.Lines %}
+{%v line %}<br>номер = {%v i %}<br>{%v line["name"] %} "проверка" data-id="{%v line["id"] %}" onclick="myPup(this,'pup1')"<br>
+{% endfor %}
+<br>
+<br>
+
+<div>
+<table class="mytab">
+<tr><th>№</th><th>Код</th><th>Имя</th><th>Адрес</th><th>ТСТ</th><th>Пин</th><th>#</th></tr>
+{% for i, line := range p.Lines %}
+<tr><td>{%v i %}</td><td>{%v line["code"] %}</td><td>{%v line["name"] %}</td><td>{%v line["adr"] %}</td><td>{%v line["tst"] %}</td><td>{%v line["pin"] %}</td><td><label data-id="{%v line["id"] %}" class="mybtn" onclick="myPup(this,'pup2')"><i class="icon-ellipsis-vert"></i></label></td></tr>
+{% endfor %}
+</table>
+</div>
+
+<br>
+
+<ul id="pup1" class="mypopup" data-id="0">
+    <li><a href=# onclick="kadry_pup1()">Изменить</a></li>
+    <li><a href=# onclick="kadry_pup1()">Сохранить</a></li>
+    <li><a href=# onclick="kadry_pup1()">Статьи</a></li>
+    <li><a href=# onclick="kadry_pup1()">Удалить</a></li>
+    <li><a href=#>Скачать</a></li>
+</ul>
+
+<ul id="pup2" class="mypopup1" data-id="0">
+    <li><label onclick="kadry_pup1()">Открыть</label></li>
+    <li><label onclick="kadry_pup1()">Уроки</label></li>
+    <li><label onclick="kadry_pup1()">Статьи</label></li>
+    <li><label onclick="kadry_pup1()">Учебник</label></li>
+    <li><label onclick="kadry_pup1()">Скачать</label></li>
+</ul>
+
+
+{% endfunc %}
+
+{% func (p *Kadry) Title() %}
+{% endfunc %}
+
+{% func (p *Kadry) Footer() %}
+{% endfunc %}
+
+{% func (p *Kadry) Nav() %}
+{% endfunc %}
+
