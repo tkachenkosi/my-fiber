@@ -1,4 +1,4 @@
-// f
+// изучение fiber
 package main
 
 import (
