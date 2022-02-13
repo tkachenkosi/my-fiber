@@ -1,4 +1,4 @@
-// изучение fiber
+// изучение fiber, шаблонизатор mustache
 package main
 
 import (
@@ -63,7 +63,10 @@ func main() {
 	app.Post("/kadry", kadry)
 	app.Post("/kadryj", kadryj)
 
+	fmt.Println("==>2")
+
 	app.Listen(":8080")
+	// app.Listen("192.168.1.69:8080")
 }
 
 // проверка записи в файл
@@ -78,8 +81,9 @@ func log_file() {
 
 }
 
+// простой вывод строки
 func test0(c *fiber.Ctx) error {
-	return c.Send([]byte("Проверка работы главного экрана. Работает на Golang, Fiber, Mustache"))
+	return c.Send([]byte("Проверка работы главного экрана. Работает на Golang, Fiber, Mustache /test1 /test2 /test3 /main3"))
 }
 
 func test1(c *fiber.Ctx) error {
@@ -180,4 +184,11 @@ func fingerprint(b []byte) uint64 {
 	hash := fnv.New64a()
 	hash.Write(b)
 	return hash.Sum64()
+}
+
+// проверка
+func re() {
+	x := 100
+	fmt.Println("df" + x)
+
 }

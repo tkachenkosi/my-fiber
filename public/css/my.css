@@ -1,8 +1,11 @@
-html{
-    box-sizing:border-box;
+html {
+  box-sizing: border-box;
 }
-*, *:after, *:before{
-    box-sizing:inherit;
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
 }
 
 body {
@@ -17,12 +20,12 @@ body {
 }
 
 h1 {
-    color: red;
+  color: red;
   font-family: Times;
 }
-}
+
 
 #result {
-    font-size:0.7rem;
-    font-weight:bold;
+  font-size: 0.7rem;
+  font-weight: bold;
 }
